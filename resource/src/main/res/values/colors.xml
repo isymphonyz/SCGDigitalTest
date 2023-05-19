@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="white">#FFFFFFFF</color>
+    <color name="transparent">#00FFFFFF</color>
+
+    <color name="azure_buffet">#f4f6fc</color>
+    <color name="deep_sky_blue">#ccdcf2</color>
+    <color name="dark_blue">#5a7bb5</color>
+    <color name="kermit_green">#5ecb00</color>
+    <color name="pinkish_red">#e52735</color>
+    <color name="navy_header">#022c43</color>
+    <color name="orange_yellow">#ffb100</color>
+    <color name="greyish_brown">#525252</color>
+    <color name="marigold">#ffc400</color>
+
+    <color name="green">#10ad85</color>
+    <color name="bg_board">#201f1f</color>
+</resources>

@@ -1,0 +1,119 @@
+plugins {
+    id 'com.android.library'
+    id 'org.jetbrains.kotlin.android'
+    id 'kotlin-android'
+    id 'kotlin-parcelize'
+    id 'kotlin-kapt'
+}
+
+android {
+    namespace 'com.scgdigital.news'
+    compileSdk 32
+
+    defaultConfig {
+        minSdk 21
+        targetSdk 32
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+
+        buildConfigField "String", "TOKEN", "\"3d3dca7ad7244d3192256407b1f0359f\""
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    buildFeatures {
+        compose true
+    }
+    composeOptions {
+        kotlinCompilerExtensionVersion compose_version
+        kotlinCompilerVersion kotlin_version
+    }
+    testOptions {
+        unitTests.returnDefaultValues = true
+    }
+}
+
+dependencies {
+
+    implementation project(path: ':resource')
+    implementation project(path: ':common')
+
+    implementation 'androidx.core:core-ktx:1.7.0'
+    implementation "androidx.compose.ui:ui:$compose_ui_version"
+    implementation "androidx.compose.material:material:$compose_ui_version"
+    implementation "androidx.constraintlayout:constraintlayout-compose:1.0.1"
+    implementation "androidx.compose.ui:ui-tooling-preview:$compose_ui_version"
+    implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.4.1'
+    implementation 'androidx.activity:activity-compose:1.4.0'
+    implementation 'androidx.lifecycle:lifecycle-process:2.4.1'
+    testImplementation 'junit:junit:4.13.2'
+    testImplementation "io.mockk:mockk:$mockk_version"
+    testImplementation "org.mockito:mockito-core:$mockk_version"
+    testImplementation "androidx.arch.core:core-testing:$androidx_arch_core_testing_version"
+    testImplementation "androidx.test:core:$androidx_test_core_version"
+    testImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:$coroutines_version"
+    testImplementation "org.mockito.kotlin:mockito-kotlin:$mockito_kotlin_version"
+    testImplementation 'org.mockito:mockito-inline:3.9.0'
+    testImplementation "com.google.truth:truth:1.1.3"
+    testImplementation "org.robolectric:robolectric:3.4.2"
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+    androidTestImplementation "androidx.compose.ui:ui-test-junit4:$compose_ui_version"
+    debugImplementation "androidx.compose.ui:ui-tooling:$compose_ui_version"
+    debugImplementation "androidx.compose.ui:ui-test-manifest:$compose_ui_version"
+
+    // Koin Core features
+    implementation "io.insert-koin:koin-core:$koin_version"
+    implementation "io.insert-koin:koin-android-compat:$koin_version"
+    implementation "io.insert-koin:koin-androidx-navigation:$koin_version"
+    implementation "io.insert-koin:koin-androidx-compose:$koin_version"
+
+    // AnimatedNavHost
+    implementation "androidx.navigation:navigation-compose:2.5.2"
+    implementation "com.google.accompanist:accompanist-navigation-animation:$animate_nav_host_version"
+
+    // Inset
+    implementation "com.google.accompanist:accompanist-insets:$animate_nav_host_version"
+    implementation "com.google.accompanist:accompanist-insets-ui:$animate_nav_host_version"
+    implementation "com.google.accompanist:accompanist-permissions:$animate_nav_host_version"
+
+    // Compose Runtime
+    implementation("androidx.compose.runtime:runtime:$compose_ui_version")
+    implementation("androidx.compose.runtime:runtime-livedata:$compose_ui_version")
+    implementation("androidx.compose.runtime:runtime-rxjava2:$compose_ui_version")
+
+    // Pager
+    implementation "com.google.accompanist:accompanist-pager:0.23.1"
+    implementation "io.coil-kt:coil-compose:2.1.0"
+
+    // OKhttp
+    implementation "com.squareup.okhttp3:okhttp:$okhttp_version"
+    implementation "com.squareup.moshi:moshi-kotlin:$moshi_version"
+
+    //REST - APIService
+    implementation "com.squareup.retrofit2:converter-moshi:$converter_moshi_version"
+    implementation "com.squareup.moshi:moshi:$moshi_version"
+    kapt "com.squareup.moshi:moshi-kotlin-codegen:$moshi_version"
+
+    //Retrofit
+    implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofit_version"
+
+    // Gson
+    implementation "com.google.code.gson:gson:2.8.6"
+
+    // Image
+    implementation("io.coil-kt:coil-compose:2.1.0")
+}

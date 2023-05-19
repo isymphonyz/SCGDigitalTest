@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">SCGDigitalAssignment</string>
+    <string name="logictest_txt_find_middle_index">Find the middle index of the sum number of left and right elements</string>
+    <string name="logictest_txt_palindrome">Check the word is palindrome or not</string>
+
+    <string name="find_middle_index_find_index">Find index</string>
+    <string name="find_middle_index_has_index">Middle index is %d</string>
+    <string name="find_middle_index_has_no_index">Index not found</string>
+    <string name="find_middle_index_enter_numbers_separated_by_commas">Enter numbers separated by commas</string>
+
+    <string name="palindrome_enter_the_word">Enter the word</string>
+    <string name="palindrome_is_true">%s is a palindrome</string>
+    <string name="palindrome_is_false">%s isn\'t a palindrome</string>
+    <string name="palindrome_check">Check word</string>
+
+    <string name="news_search">Search...</string>
+    <string name="news_updated">Updated: %s</string>
+
+    <string name="global_headline_full_screen_error_network">Uh oh, we have a problem</string>
+    <string name="global_subtitle_full_screen_error_network">Please check your internet connection, then press refresh.</string>
+    <string name="global_button_refresh">Refresh</string>
+    <string name="global_dialog_headline_oops">Oops!</string>
+    <string name="global_dialog_body_ran_into_issue">We ran into an issue.</string>
+    <string name="global_dialog_button_retry">Retry</string>
+    <string name="global_subtitle_full_screen_error_general">Please hit refresh to try again</string>
+    <string name="general_dialog_network_error_description">There was a problem with your connection. Please make sure you are connected to the internet.</string>
+    <string name="general_dialog_network_error_title">Network error</string>
+</resources>
